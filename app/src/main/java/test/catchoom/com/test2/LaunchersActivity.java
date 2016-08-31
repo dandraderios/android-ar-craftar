@@ -45,20 +45,10 @@ public class LaunchersActivity extends Activity implements OnClickListener {
 		
 		// Setup howto links
 		findViewById(R.id.howto_link).setOnClickListener(this);
-		findViewById(R.id.howto_link_ar_programmatically).setOnClickListener(this);
-		findViewById(R.id.howto_link_ar_from_craftar).setOnClickListener(this);
-		findViewById(R.id.howto_link_recognition_only).setOnClickListener(this);
-		findViewById(R.id.howto_link_on_device_ar).setOnClickListener(this);
 
 		// Setup example links
-		findViewById(R.id.play_ar_programmatically).setOnClickListener(this);
 		findViewById(R.id.play_ar_from_craftar).setOnClickListener(this);
-		findViewById(R.id.play_recognition_only).setOnClickListener(this);
-		findViewById(R.id.play_on_device_ar).setOnClickListener(this);
-		
-		// Setup bottom Links
-		findViewById(R.id.imageButton_logo).setOnClickListener(this);
-		findViewById(R.id.button_signUp).setOnClickListener(this);
+
 	}
 
 	@Override
@@ -71,10 +61,6 @@ public class LaunchersActivity extends Activity implements OnClickListener {
 				launchHowto = new Intent(this, HowToActivity.class);
 				launchHowto.putExtra(HowToActivity.HOWTO_LAYOUT_EXTRA, R.layout.activity_howto);
 				break;
-			case R.id.howto_link_ar_programmatically:
-				launchHowto = new Intent(this, HowToActivity.class);
-				launchHowto.putExtra(HowToActivity.HOWTO_LAYOUT_EXTRA, R.layout.activity_howto_ar_programmatically);
-				break;
 			case R.id.howto_link_ar_from_craftar:
 				launchHowto = new Intent(this, HowToActivity.class);
 				launchHowto.putExtra(HowToActivity.HOWTO_LAYOUT_EXTRA, R.layout.activity_howto_ar_from_craftar);
@@ -82,10 +68,6 @@ public class LaunchersActivity extends Activity implements OnClickListener {
 			case R.id.howto_link_recognition_only:
 				launchHowto = new Intent(this, HowToActivity.class);
 				launchHowto.putExtra(HowToActivity.HOWTO_LAYOUT_EXTRA, R.layout.activity_howto_recognition_only);
-				break;
-			case R.id.howto_link_on_device_ar:
-				launchHowto = new Intent(this, HowToActivity.class);
-				launchHowto.putExtra(HowToActivity.HOWTO_LAYOUT_EXTRA, R.layout.activity_howto_on_device_ar);
 				break;
 		}
 
@@ -99,17 +81,11 @@ public class LaunchersActivity extends Activity implements OnClickListener {
 		Intent playExampleIntent = null;
 
 		switch(v.getId()){
-			case R.id.play_ar_programmatically:
-				playExampleIntent = new Intent(this, ARProgrammaticallyActivity.class);
-				break;
 			case R.id.play_ar_from_craftar:
 				playExampleIntent = new Intent(this, ARFromCraftARActivity.class);
 				break;
 			case R.id.play_recognition_only:
 				playExampleIntent = new Intent(this, RecognitionOnlyActivity.class);
-				break;
-			case R.id.play_on_device_ar:
-				playExampleIntent = new Intent(this, OnDeviceARActivity.class);
 				break;
 		}
 

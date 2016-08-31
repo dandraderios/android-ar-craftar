@@ -20,13 +20,13 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.+'
-    compile files('/home/dandrade/workspace/Test2/libs/craftar-augmented-reality-sdk-android.jar')
-    compile files('/home/dandrade/workspace/Test2/libs/httpcore-4.3.jar')
-    compile files('/home/dandrade/workspace/Test2/libs/httpmime-4.3.jar')
-    compile files('/home/dandrade/workspace/Test2/libs/sanselan-0_97-android-1.0.0.jar')
+    compile files('/Users/dandrade/Workspace/android-ar-craftar/libs/craftar-augmented-reality-sdk-android.jar')
+    compile files('/Users/dandrade/Workspace/android-ar-craftar/libs/httpcore-4.3.jar')
+    compile files('/Users/dandrade/Workspace/android-ar-craftar/libs/httpmime-4.3.jar')
+    compile files('/Users/dandrade/Workspace/android-ar-craftar/libs/sanselan-0_97-android-1.0.0.jar')
 }
 
 android {
